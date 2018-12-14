@@ -1,5 +1,5 @@
 import { withRouter } from "next/router";
-import Layout from "../lib/layout.js";
+import Layout from "../components/layout.js";
 
 export default withRouter(props => (
   <Layout>
