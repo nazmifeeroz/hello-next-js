@@ -2,9 +2,7 @@ import Layout from "../components/layout";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
 
-const Index = props => {
-  console.log("props", props);
-  return (
+const Index = props => (
     <Layout>
       <h1>Batman TV Shows</h1>
       <ul>
@@ -18,12 +16,11 @@ const Index = props => {
       </ul>
     </Layout>
   );
-};
 
 Index.getInitialProps = async function() {
   console.log("here");
   const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-  const data = await res.json;
+  const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
 
